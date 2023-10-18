@@ -6,14 +6,25 @@ const AddProduct = () => {
         const form = e.target;
         const image = form.image.value;
         const name = form.name.value;
-        const brand = form.brand.value;
+        const brandName = form.brandName.value;
         const type = form.type.value;
         const price = form.price.value;
         const details = form.details.value;
         const rating = form.rating.value;
         
-        const newCar = {image,name,brand,type,price,details,rating}
+        const newCar = {image,name,brandName,type,price,details,rating}
         console.log(newCar);
+        fetch('http://localhost:5000/car',{
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newCar)
+        })
+        .then(res=> res.json())
+        .then (data=>{
+            console.log(data)
+        })
 
     }
     return (
@@ -31,7 +42,7 @@ const AddProduct = () => {
                 </div>
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-600">Brand</label>
-                    <select name="brand" className="mt-1 p-2 w-full border rounded-md" required>
+                    <select name="brandName" className="mt-1 p-2 w-full border rounded-md" required>
                         <option value="">Select Brand</option>
                         <option value="Toyota">Toyota</option>
                         <option value="Ford">Ford</option>

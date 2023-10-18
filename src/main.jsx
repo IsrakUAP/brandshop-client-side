@@ -10,6 +10,7 @@ import Home from './Pages/Home/Home';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import MyCart from './Pages/MyCart/MyCart';
 import Login from './Pages/Login/Login';
+import ShowCars from './Components/ShowCars/ShowCars';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>
+      },
+      {
+        path: "/showCars/:brandName",
+        element: <ShowCars></ShowCars>,
+        loader: ()=> fetch("http://localhost:5000/car")
       },
     ],
   },
