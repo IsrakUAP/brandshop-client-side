@@ -2,7 +2,7 @@
 
 const Banner = () => {
     return (
-        <div>
+        <div className="mb-8">
              <div className="banner-section relative h-80 flex items-center justify-center text-white bg-cover bg-center" style={{ backgroundImage: 'url("https://i.ibb.co/pfHnjY8/1a-bmw-wanchaishowroom-finedata-1.webp")' }}>
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="container text-center z-10">
