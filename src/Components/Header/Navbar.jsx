@@ -10,10 +10,10 @@ const Navbar = () => {
                     <span className="text-lg font-bold">Car Planet</span>
                 </div>
                 <div className="navbar-center flex-1 gap-4">
-                    <NavLink to="/" className="text-base text-gray-700 hover:text-red-500 hover:underline">Home</NavLink>
-                    <NavLink to="/addProduct" className="text-base text-gray-700 hover:text-red-500 hover:underline">Add Product</NavLink>
-                    <NavLink to="/myCart" className="text-base text-gray-700 hover:text-red-500 hover:underline">My Cart</NavLink>
-                    <NavLink to="/login" className="text-base font-semibold text-red-500 hover:underline">Login</NavLink>
+                    <NavLink to="/" className="text-base text-gray-700 focus:text-red-500 focus:underline">Home</NavLink>
+                    <NavLink to="/addProduct" className="text-base text-gray-700 focus:text-red-500 focus:underline">Add Product</NavLink>
+                    <NavLink to="/myCart" className="text-base text-gray-700 focus:text-red-500 focus:underline">My Cart</NavLink>
+                    <NavLink to="/login" className="text-base text-gray-700 focus:text-red-500 focus:underline">Login</NavLink>
 
                 </div>
                 <div className="ml-auto navbar-end flex-1">
