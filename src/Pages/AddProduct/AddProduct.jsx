@@ -24,7 +24,7 @@ const AddProduct = () => {
         .then(res=> res.json())
         .then (data=>{
             console.log(data)
-            if (data.success) {
+            if (data.insertedId) {
                 swal("Good job!", "Product added successfully", "success");
               }
               else {
@@ -80,7 +80,7 @@ const AddProduct = () => {
                 </div>
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-600">Rating</label>
-                    <input type="number" name="rating" className="mt-1 p-2 w-full border rounded-md" placeholder="Enter rating" required />
+                    <input type="range" name="rating" className="mt-1 p-2 w-full border rounded-md" placeholder="Enter rating" required />
                 </div>
                 <input type="submit" className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300 cursor-pointer" value="Add Product"/>
             </form>

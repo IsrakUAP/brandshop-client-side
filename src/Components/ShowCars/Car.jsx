@@ -15,10 +15,10 @@ const Car = ({car}) => {
                 </h2>
                 <p>{type}</p>
                 <p className="font-semibold">${price}</p>
-                <p>Rating: {rating}</p>
+                <p>Rating: {rating}%</p>
                 <div className="card-actions justify-end">
-                   <Link to={`/productDetails/${_id}`}><button className="btn btn-accent">Details button</button></Link> 
-                   <button className="btn btn-accent">Update button</button>
+                   <Link to={`/productDetails/${_id}`}><button className="btn btn-accent">Details</button></Link> 
+                  <Link to={`/updateProduct/${_id}`}> <button className="btn btn-accent">Update</button> </Link>
                 </div>
             </div>
         </div>

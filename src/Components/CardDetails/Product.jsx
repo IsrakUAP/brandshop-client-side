@@ -39,8 +39,8 @@ const Product = ({ product }) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">{name}</h2>
+          <p>Price: {price}$</p>
           <p>{details}</p>
-          <p>{price}$</p>
           <input type="hidden" name="name" value={name} />
           <input type="hidden" name="image" value={image} />
           <input type="hidden" name="price" value={price} />
