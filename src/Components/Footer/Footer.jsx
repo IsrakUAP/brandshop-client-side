@@ -48,7 +48,7 @@ const Footer = () => {
                     </div>
                 </nav>
                 <aside>
-                    <p>Copyright © 2023 - All rights reserved by Car Plant Company</p>
+                    <p>Copyright © 2023 - All rights reserved by Car Planet Company</p>
                 </aside>
             </footer>
         </div>

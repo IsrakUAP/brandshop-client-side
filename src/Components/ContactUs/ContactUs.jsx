@@ -6,11 +6,9 @@ const ContactUs = () => {
             <p className="text-center text-4xl font-semibold mb-4">Contact Us</p>
             <div className="flex flex-wrap justify-center items-center bg-gray-100">
       <div className="w-full md:w-1/2 p-8">
-        <h1 className="text-3xl font-bold mb-6">Welcome to Our Car Plant</h1>
+        <h1 className="text-3xl font-bold mb-6">Welcome to Our Car Planet</h1>
         <p className="mb-4">
-          We are a leading car manufacturing company dedicated to delivering high-quality vehicles
-          tailored to meet your needs. With cutting-edge technology and a focus on sustainability,
-          we pride ourselves on creating the cars of tomorrow.
+        Your ultimate destination for premium automotive solutions. At Car Planet, we are committed to offering top-tier vehicles meticulously crafted to match your requirements. Leveraging state-of-the-art technology and an unwavering dedication to eco-conscious practices, we take pride in shaping the future of the automotive industry.
         </p>
         <h2 className="text-xl font-semibold mb-2">Why Choose Us?</h2>
         <ul className="list-disc ml-6 mb-4">
