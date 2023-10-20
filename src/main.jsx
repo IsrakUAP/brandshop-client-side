@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: "/myCart",
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader: () => fetch("https://b8a10-brandshop-server-side-d5npkia9n.vercel.app/product")
+        loader: () => fetch("https://b8a10-brandshop-server-side-3npr2xlsd.vercel.app/product")
       },
       {
         path: "/login",
@@ -49,17 +49,17 @@ const router = createBrowserRouter([
       {
         path: "/updateProduct/:id",
         element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-d5npkia9n.vercel.app/car/${params.id}`)
+        loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-3npr2xlsd.vercel.app/car/${params.id}`)
       },
       {
         path: "/showCars/:brandName",
         element: <ShowCars></ShowCars>,
-        loader: () => fetch("https://b8a10-brandshop-server-side-d5npkia9n.vercel.app/car")
+        loader: () => fetch("https://b8a10-brandshop-server-side-3npr2xlsd.vercel.app/car")
       },
       {
         path: "/productDetails/:_id",
         element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-        loader: () => fetch("https://b8a10-brandshop-server-side-d5npkia9n.vercel.app/car")
+        loader: () => fetch("https://b8a10-brandshop-server-side-3npr2xlsd.vercel.app/car")
       },
     ],
   },

@@ -3,10 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { getAuth } from "firebase/auth";
 
-
 const Navbar = () => {
     const {user,logOut,createUser} = useContext(AuthContext);
-    const [isDarkTheme, setIsDarkTheme] = useState(false);
     const [displayName, setDisplayName] = useState("");
     const [photoURL, setPhotoURL] = useState("");
 
@@ -19,14 +17,6 @@ const Navbar = () => {
             setPhotoURL(currentUser.photoURL);
         }
     }, [user,createUser]);
-
-    const toggleTheme = () => {
-        setIsDarkTheme(prev => !prev);
-        document.documentElement.classList.toggle("dark");
-    };
-
-
-
     const handleSignout = () => {
         logOut();
     }
@@ -83,10 +73,7 @@ const Navbar = () => {
                     <Link to="/login">
                         <button className="btn btn-accent">Login</button>
                     </Link>
-                )}   
-                <button className={`btn btn-accent ml-2 dark:bg-white dark:text-gray-800 hidden md:block`} onClick={toggleTheme}>
-                        {isDarkTheme ? "Light" : "Dark"}
-                    </button>      
+                )}              
                 </div>                 
             </nav>
         </div>

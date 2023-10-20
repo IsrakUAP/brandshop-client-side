@@ -14,7 +14,7 @@ const AddProduct = () => {
         
         const newCar = {image,name,brandName,type,price,details,rating}
         console.log(newCar);
-        fetch('https://b8a10-brandshop-server-side-d5npkia9n.vercel.app/car',{
+        fetch('https://b8a10-brandshop-server-side-3npr2xlsd.vercel.app/car',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

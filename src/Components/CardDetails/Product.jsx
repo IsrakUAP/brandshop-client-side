@@ -10,7 +10,7 @@ const Product = ({ product }) => {
     const price = form.price.value;
     const newProduct = { image, name, price }
     console.log(newProduct);
-    fetch('https://b8a10-brandshop-server-side-d5npkia9n.vercel.app/product', {
+    fetch('https://b8a10-brandshop-server-side-3npr2xlsd.vercel.app/product', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

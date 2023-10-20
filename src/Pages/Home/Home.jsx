@@ -8,7 +8,7 @@ import ContactUs from "../../Components/ContactUs/ContactUs";
 const Home = () => {
     const brands = useLoaderData();
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto">       
             <Banner></Banner>
             <Cards brands={brands}></Cards>
             <OurServices></OurServices>
