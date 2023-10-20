@@ -13,6 +13,9 @@ import Login from './Pages/Login/Login';
 import ShowCars from './Components/ShowCars/ShowCars';
 import ProductDetails from './Components/CardDetails/ProductDetails';
 import UpdateProduct from './Pages/UpdateProduct/UpdateProduct';
+import Register from './Pages/Register/Register';
+import AuthProvider from './providers/AuthProvider';
+import PrivateRoute from './Components/PrivateRoute.jsx/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -22,43 +25,49 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader : ()=> fetch("/brand.json"),
+        loader: () => fetch("/brand.json"),
       },
       {
         path: "/addProduct",
-        element: <AddProduct></AddProduct>,
+        element: <PrivateRoute> <AddProduct></AddProduct> </PrivateRoute> ,
       },
       {
         path: "/myCart",
-        element: <MyCart></MyCart>,
-        loader: ()=> fetch("http://localhost:5000/product")
+        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
+        loader: () => fetch("https://b8a10-brandshop-server-side-gho11qwql.vercel.app/product")
       },
       {
         path: "/login",
         element: <Login></Login>
       },
       {
+        path: "/registration",
+        element: <Register></Register>
+      },
+      {
         path: "/updateProduct/:id",
-        element: <UpdateProduct></UpdateProduct>,
-        loader: ({params})=> fetch(`http://localhost:5000/car/${params.id}`)
+        element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
+        loader: ({ params }) => fetch(`https://b8a10-brandshop-server-side-gho11qwql.vercel.app/car/${params.id}`)
       },
       {
         path: "/showCars/:brandName",
         element: <ShowCars></ShowCars>,
-        loader: ()=> fetch("http://localhost:5000/car")
+        loader: () => fetch("https://b8a10-brandshop-server-side-gho11qwql.vercel.app/car")
       },
       {
         path: "/productDetails/:_id",
-        element: <ProductDetails></ProductDetails>,
-        loader: ()=> fetch("http://localhost:5000/car")
+        element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
+        loader: () => fetch("https://b8a10-brandshop-server-side-gho11qwql.vercel.app/car")
       },
     ],
   },
-  
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
